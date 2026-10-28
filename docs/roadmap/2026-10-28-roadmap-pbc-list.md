@@ -90,3 +90,12 @@ Ces améliorations ne sont pas encore codées dans Lovable. Elles le seront apr�
 3. **Gratuité.** Lovable et Supabase ont des offres gratuites limitées (crédits, stockage). Les plafonds sont à vérifier avant le pilote.
 4. **Hébergement en ligne.** Lovable héberge l'application en ligne. La maquette n'utilisera que des données fictives. Pour les vraies factures, il faudra une information RGPD aux clients et un contrat de sous-traitance (art. 28 RGPD).
 6. **Données réelles et actualisation toutes les 12 h.** L'application publiée ne peut pas utiliser le MCP ([Lovable, Chat connectors](https://docs.lovable.dev/integrations/mcp-servers)). Il faut donc l'API Pennylane v2, avec un jeton stocké en secret côté serveur. L'API expose le champ `attachment_required` sur les transactions ([changelog Pennylane du 28/05/2025](https://pennylane.readme.io/changelog/v2-transactions-add-attachment_required-in-responses)). En revanche, il n'est **pas confirmé** que le statut « Demande comptable » soit lisible par l'API. C'est à tester sur le dossier de test.
+
+## 7. Suivi de réalisation (Lovable)
+
+| Date | Réalisé |
+|---|---|
+| 28/10/2026 | Base de données, connexion, écrans client et cabinet, règles d'accès par dossier. |
+| 28/10/2026 | Synchronisation Pennylane automatique (6 h et 18 h, heure de Paris) et bouton « Actualiser maintenant ». Le statut « Demande comptable » n'est pas fourni par l'API. |
+| 28/10/2026 | Validation par le cabinet avant envoi (« À valider », « Envoyer au client », « Ne pas demander », « Réactiver »). Inscription libre fermée. Test d'accès réalisé par Lovable : le client ne voit que les paiements envoyés. |
+| En cours | Détection de tous les virements fournisseurs et clients non lettrés ; assistant client avec Claude Sonnet 5.5. |
