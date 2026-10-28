@@ -69,6 +69,19 @@ Selon la source [Pennylane, « Importer des factures par transfert d'e-mail »](
 | **5. Pilote** | Test avec 1 ou 2 clients volontaires | Retours et ajustements |
 | **6. Plus tard (V2)** | Relances automatiques, lien direct vers la page « Mes factures » des principaux fournisseurs, connexion directe à Pennylane | À décider |
 
+## 5 bis. Améliorations retenues par Juju (28/10/2026)
+
+Ces améliorations ne sont pas encore codées dans Lovable. Elles le seront après accord de Juju, car chaque demande consomme des crédits.
+
+| Amélioration | Description | État |
+|---|---|---|
+| **Priorisation** | Afficher d'abord les montants les plus élevés et les virements les plus anciens. | À faire |
+| **Barre de progression** | Indiquer l'avancement du client (factures fournies sur factures demandées). | Déjà en place sur l'accueil client |
+| **Dépôt depuis le téléphone** | Prendre une photo de la facture directement avec l'appareil photo du téléphone. | À faire |
+| **Contrôle du document déposé** | Comparer le montant et la date lus sur la facture avec ceux du virement, et signaler les écarts. Cela nécessite une lecture automatique du document (IA ou OCR), dont le coût est à vérifier. | À faire |
+| **Historique** | Garder la trace de chaque dépôt : qui, quand, quel fichier, quel statut. | À faire |
+| **Export pour le cabinet** | Exporter la liste des justificatifs encore manquants par client (fichier Excel ou CSV). | À faire |
+
 ## 6. Points ouverts (à vérifier, rien n'est supposé)
 
 1. **Repérer les virements sans facture.** L'outil MCP Pennylane permet de lister les transactions bancaires, mais je n'ai pas trouvé de filtre explicite « sans justificatif ». C'est à tester sur un dossier réel à l'étape 2.
