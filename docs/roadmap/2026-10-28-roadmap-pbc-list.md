@@ -62,7 +62,7 @@ Selon la source [Pennylane, « Importer des factures par transfert d'e-mail »](
 | Étape | Contenu | Résultat |
 |---|---|---|
 | **0. Cadrage** | Besoins, décisions RGPD, adresse Pennylane | Ce document (fait) |
-| **1. Maquette Lovable** | Écrans du parcours client et tableau de bord cabinet, avec **données fictives** | Lien de prévisualisation à tester |
+| **1. Application Lovable** | Écrans du parcours client et tableau de bord cabinet, alimentés par les **vraies données du dossier de test** via l'API Pennylane, avec une actualisation automatique toutes les 12 h (décision de Juju du 28/10/2026) | Lien de prévisualisation à tester |
 | **2. Source des données** | Comment obtenir la liste des virements sans facture : export Pennylane, liste préparée avec Claude via le MCP Pennylane, puis import dans l'app | Méthode validée sur un client test |
 | **3. Comptes et sécurité** | Connexion client (Lovable / Supabase Auth), droits « un client ne voit que ses données », stockage des fichiers déposés | Espace client sécurisé |
 | **4. Envoi vers Pennylane** | Les fichiers déposés sont transmis à l'adresse achats Pennylane du dossier | Factures dans l'onglet Achats |
@@ -75,3 +75,4 @@ Selon la source [Pennylane, « Importer des factures par transfert d'e-mail »](
 2. **Lien entre l'application et Pennylane.** Le MCP Pennylane est un outil utilisé par Claude, l'application Lovable ne peut pas s'en servir directement. Une connexion automatique demanderait l'API Pennylane : disponibilité selon votre offre et coût à vérifier.
 3. **Gratuité.** Lovable et Supabase ont des offres gratuites limitées (crédits, stockage). Les plafonds sont à vérifier avant le pilote.
 4. **Hébergement en ligne.** Lovable héberge l'application en ligne. La maquette n'utilisera que des données fictives. Pour les vraies factures, il faudra une information RGPD aux clients et un contrat de sous-traitance (art. 28 RGPD).
+6. **Données réelles et actualisation toutes les 12 h.** L'application publiée ne peut pas utiliser le MCP ([Lovable, Chat connectors](https://docs.lovable.dev/integrations/mcp-servers)). Il faut donc l'API Pennylane v2, avec un jeton stocké en secret côté serveur. L'API expose le champ `attachment_required` sur les transactions ([changelog Pennylane du 28/05/2025](https://pennylane.readme.io/changelog/v2-transactions-add-attachment_required-in-responses)). En revanche, il n'est **pas confirmé** que le statut « Demande comptable » soit lisible par l'API. C'est à tester sur le dossier de test.
