@@ -100,4 +100,5 @@ Ces améliorations ne sont pas encore codées dans Lovable. Elles le seront apr�
 | 28/10/2026 | Validation par le cabinet avant envoi (« À valider », « Envoyer au client », « Ne pas demander », « Réactiver »). Inscription libre fermée. Test d'accès réalisé par Lovable : le client ne voit que les paiements envoyés. |
 | 28/10/2026 | Détection de tous les virements non lettrés (sorties et entrées) grâce au champ de lettrage de l'API Pennylane v2. Dossier de test, 12 derniers mois : 992 paiements non lettrés sur 1 105, et 869 encaissements non lettrés sur 954. Deux rubriques côté client (achats et ventes) et une adresse de collecte « ventes ». |
 | 28/10/2026 | Assistant client (Claude Sonnet 5.5) avec transmission des questions au cabinet. En attente de la clé `ANTHROPIC_API_KEY`. |
-| À décider | Les comptes 437, 445, 6xx et 7xx ne se lettrent presque jamais et gonflent la liste. Il faut décider s'il faut limiter la détection aux comptes 401, 411 et 471. |
+| 28/10/2026 | Détection limitée aux comptes 401, 411 et 471 (choix de Juju), réglable par dossier. Dossier de test : 758 paiements et 835 encaissements détectés sur 12 mois, surtout en 471. Clé API Claude ajoutée par Juju. |
+| À faire | Premier « Actualiser maintenant » réel, puis test du parcours client et de l'assistant. |
