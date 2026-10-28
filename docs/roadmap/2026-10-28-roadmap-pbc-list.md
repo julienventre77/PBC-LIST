@@ -42,7 +42,7 @@ Selon la source [Pennylane, « Importer des factures par transfert d'e-mail »](
 4. **Écran d'un fournisseur.** Il présente la liste des virements concernés (date, montant, libellé bancaire) et deux choix :
    - **« Je dépose mes factures »** : glisser-déposer des fichiers, un par virement ou plusieurs d'un coup ;
    - **« Je les envoie par e-mail »** : l'adresse Pennylane avec un bouton « copier », et une courte aide pour la renseigner dans le compte du fournisseur ou transférer les e-mails.
-5. **Option « Je n'ai pas de facture ».** Le client peut ajouter un commentaire libre (ex. « frais personnels », « facture perdue »). Option validée par Juju. Avant de confirmer, le client voit le message ci-dessous. *Texte à valider par Juju.*
+5. **Option « Je n'ai pas de facture ».** Le client peut ajouter un commentaire libre (ex. « frais personnels », « facture perdue »). Option validée par Juju. Avant de confirmer, le client voit le message ci-dessous. Texte validé par Juju le 28/10/2026.
 
    > **Attention : sans facture, cette dépense risque de :**
    > - **ne pas être déduite de votre résultat**, car une charge doit être appuyée de justificatifs suffisants ([BOI-BIC-CHG-10](https://bofip.impots.gouv.fr/bofip/3848-PGP.html/identifiant=BOI-BIC-CHG-10-20190123)) ;
@@ -75,4 +75,3 @@ Selon la source [Pennylane, « Importer des factures par transfert d'e-mail »](
 2. **Lien entre l'application et Pennylane.** Le MCP Pennylane est un outil utilisé par Claude, l'application Lovable ne peut pas s'en servir directement. Une connexion automatique demanderait l'API Pennylane : disponibilité selon votre offre et coût à vérifier.
 3. **Gratuité.** Lovable et Supabase ont des offres gratuites limitées (crédits, stockage). Les plafonds sont à vérifier avant le pilote.
 4. **Hébergement en ligne.** Lovable héberge l'application en ligne. La maquette n'utilisera que des données fictives. Pour les vraies factures, il faudra une information RGPD aux clients et un contrat de sous-traitance (art. 28 RGPD).
-5. **Texte « Je n'ai pas de facture ».** Le message sur les conséquences est en attente de validation par Juju.
