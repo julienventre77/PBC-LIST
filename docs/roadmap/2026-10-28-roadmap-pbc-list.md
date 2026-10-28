@@ -101,4 +101,6 @@ Ces améliorations ne sont pas encore codées dans Lovable. Elles le seront apr�
 | 28/10/2026 | Détection de tous les virements non lettrés (sorties et entrées) grâce au champ de lettrage de l'API Pennylane v2. Dossier de test, 12 derniers mois : 992 paiements non lettrés sur 1 105, et 869 encaissements non lettrés sur 954. Deux rubriques côté client (achats et ventes) et une adresse de collecte « ventes ». |
 | 28/10/2026 | Assistant client (Claude Sonnet 5.5) avec transmission des questions au cabinet. En attente de la clé `ANTHROPIC_API_KEY`. |
 | 28/10/2026 | Détection limitée aux comptes 401, 411 et 471 (choix de Juju), réglable par dossier. Dossier de test : 758 paiements et 835 encaissements détectés sur 12 mois, surtout en 471. Clé API Claude ajoutée par Juju. |
+| 28/10/2026 | Préparation du jeton cabinet Pennylane ([Firm API](https://pennylane.readme.io/docs/firm-api)) : dossier indiqué à chaque appel par l'en-tête `X-Company-Id`, contrôle d'accès avant synchronisation. Pour l'instant, seul le dossier de test est actif (choix de Juju). |
+| Plus tard | Jeton cabinet : Paramètres du cabinet → Firm Tokens, en lecture seule, à mettre dans le secret `PENNYLANE_API_TOKEN`. Tous les dossiers du cabinet deviendront alors synchronisables. |
 | À faire | Premier « Actualiser maintenant » réel, puis test du parcours client et de l'assistant. |
