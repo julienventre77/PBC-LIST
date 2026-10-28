@@ -81,6 +81,7 @@ Ces améliorations ne sont pas encore codées dans Lovable. Elles le seront apr�
 | **Contrôle du document déposé** | Comparer le montant et la date lus sur la facture avec ceux du virement, et signaler les écarts. Cela nécessite une lecture automatique du document (IA ou OCR), dont le coût est à vérifier. | À faire |
 | **Historique** | Garder la trace de chaque dépôt : qui, quand, quel fichier, quel statut. | À faire |
 | **Export pour le cabinet** | Exporter la liste des justificatifs encore manquants par client (fichier Excel ou CSV). | À faire |
+| **Assistant (chatbot) client** | Dans l'espace client, un assistant explique quoi faire pour chaque demande et répond aux autres questions. Limité à la procédure ; il renvoie vers le cabinet pour tout conseil comptable ou fiscal. Coût : passerelle IA de Lovable, avec 4 crédits offerts par mois (offre temporaire), puis consommation de crédits ([Lovable AI](https://docs.lovable.dev/features/ai)). Les échanges du client sont transmis au fournisseur du modèle d'IA (point RGPD). Alternative gratuite : une aide guidée et une FAQ sans IA. | À décider |
 
 ## 6. Points ouverts (à vérifier, rien n'est supposé)
 
