@@ -1,6 +1,6 @@
 # Roadmap : application PBC List
 
-Rédigée le 28/10/2026 avec Juju (comptable). Statut : **brouillon à valider**.
+Rédigée le 28/10/2026 avec Juju (comptable). Statut : **validée par Juju le 28/10/2026**.
 
 ## 1. Pourquoi
 
