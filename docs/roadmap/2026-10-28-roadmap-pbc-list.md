@@ -51,7 +51,7 @@ Selon la source [Pennylane, « Importer des factures par transfert d'e-mail »](
    >
    > Vous pouvez souvent obtenir un duplicata auprès du fournisseur. Votre comptable reviendra vers vous si besoin.
 
-   Le 29/10/2026, les références affichées dans l'application ont été précisées après vérification sur BOFiP et Légifrance : BOI-BIC-CHG-10-20-20 § 1 et 10 ; CGI art. 271, II-2 ; BOI-TVA-DED-40-10-10 § 30. Pour un encaissement, une note sans citation légale rappelle que la pièce attendue est la facture établie pour le client. Ces textes sont à valider par Juju avec la demande de fusion (section 7).
+   Le 29/10/2026, les références affichées dans l'application ont été précisées après vérification sur BOFiP et Légifrance : BOI-BIC-CHG-10-20-20 § 1 et 10 ; CGI art. 271, II-2 ; BOI-TVA-DED-40-10-10 § 30. Pour un encaissement, une note sans citation légale rappelle que la pièce attendue est la facture établie pour le client. Juju a validé ces textes avec la demande de fusion du 29/10/2026 (section 7).
 6. **Fournisseur suivant**, jusqu'à la fin, puis un écran de confirmation.
 
 ## 4. Côté cabinet
@@ -73,13 +73,13 @@ Selon la source [Pennylane, « Importer des factures par transfert d'e-mail »](
 
 ## 5 bis. Améliorations retenues par Juju (28/10/2026)
 
-Le 29/10/2026, la priorisation et le dépôt depuis le téléphone sont codés par Claude sur GitHub, dans une demande de fusion qui attend l'accord de Juju (section 7). Les autres améliorations ne sont pas encore codées.
+Le 29/10/2026, la priorisation et le dépôt depuis le téléphone ont été codés par Claude sur GitHub, puis fusionnés avec l'accord de Juju (section 7). Les autres améliorations ne sont pas encore codées.
 
 | Amélioration | Description | État |
 |---|---|---|
-| **Priorisation** | Afficher d'abord les montants les plus élevés et les virements les plus anciens. | Codée, en attente de fusion (29/10/2026) |
+| **Priorisation** | Afficher d'abord les montants les plus élevés et les virements les plus anciens. | En place depuis le 29/10/2026 |
 | **Barre de progression** | Indiquer l'avancement du client (factures fournies sur factures demandées). | Déjà en place sur l'accueil client |
-| **Dépôt depuis le téléphone** | Prendre une photo de la facture directement avec l'appareil photo du téléphone. | Codé, en attente de fusion (29/10/2026) |
+| **Dépôt depuis le téléphone** | Prendre une photo de la facture directement avec l'appareil photo du téléphone. | En place depuis le 29/10/2026 |
 | **Contrôle du document déposé** | Comparer le montant et la date lus sur la facture avec ceux du virement, et signaler les écarts. Cela nécessite une lecture automatique du document (IA ou OCR), dont le coût est à vérifier. | À faire |
 | **Historique** | Garder la trace de chaque dépôt : qui, quand, quel fichier, quel statut. | À faire |
 | **Export pour le cabinet** | Exporter la liste des justificatifs encore manquants par client (fichier Excel ou CSV). | À faire |
@@ -109,7 +109,7 @@ Le 29/10/2026, la priorisation et le dépôt depuis le téléphone sont codés p
 | 28/10/2026 | Synchronisation via le **MCP Pennylane** (connexion OAuth une fois depuis l'espace cabinet, bouton « Connecter Pennylane (MCP) »), avec l'API v2 en secours. La fiche du dossier indique la source (« MCP » ou « API (secours) »). Même règle de détection. Limite : le MCP n'indique pas les transactions archivées. Usage d'une application serveur non documenté par Pennylane ([Pennylane MCP](https://pennylane-mcp.readme.io/docs/getting-started)). |
 | 28/10/2026 | Accès séparés : page de connexion client (`/`) et page cabinet (`/cabinet/connexion`), refus croisé des comptes, création du premier administrateur uniquement côté cabinet. |
 | 28/10/2026 | Bouton « Importer mes dossiers Pennylane » via le MCP (nom et company_id ; le MCP ne fournit pas les adresses de collecte, à saisir). Droits de lecture ajoutés pour lister les entreprises. Test de Juju : l'application fonctionne. |
-| 29/10/2026 | Lots 1, 2, 4 et 5 codés par Claude sur GitHub, relus et vérifiés (types, 37 tests, compilation) : design aux couleurs Pennylane, maniabilité côté client (recherche, filtres, priorité, parcours guidé, photo), tableau de revue côté cabinet (tout cocher, actions groupées), robot côté cabinet. Les IBAN sont masqués avant tout envoi aux robots. Demande de fusion en attente de l'accord de Juju : [PR #3](https://github.com/julienventre77/factures-manquantes/pull/3). Une petite migration (historique du robot supprimé avec son dossier) est à faire dans Lovable, avec son accord. |
-| En cours | Lot 3, règles « ne plus demander » et paramètres du cabinet : [PR #2](https://github.com/julienventre77/factures-manquantes/pull/2). Lot 6, analyse des demandes par Claude dans chaque dossier : [PR #1](https://github.com/julienventre77/factures-manquantes/pull/1). Elles partent de la branche de la PR #3 et viseront `main` après sa fusion, avec l'accord de Juju. |
+| 29/10/2026 | Lots 1, 2, 4 et 5 codés par Claude sur GitHub, relus et vérifiés (types, 37 tests, compilation) : design aux couleurs Pennylane, maniabilité côté client (recherche, filtres, priorité, parcours guidé, photo), tableau de revue côté cabinet (tout cocher, actions groupées), robot côté cabinet. Les IBAN sont masqués avant tout envoi aux robots. Fusionnés dans `main` avec l'accord de Juju ([PR #3](https://github.com/julienventre77/factures-manquantes/pull/3)) ; l'aperçu Lovable affiche le nouveau design. Migration appliquée par Lovable avec son accord (0,4 crédit) : l'historique du robot cabinet est supprimé avec son dossier. |
+| En cours | Lot 3, règles « ne plus demander » et paramètres du cabinet : [PR #2](https://github.com/julienventre77/factures-manquantes/pull/2). Lot 6, analyse des demandes par Claude dans chaque dossier : [PR #1](https://github.com/julienventre77/factures-manquantes/pull/1). Elles peuvent maintenant viser `main` ; leur fusion et leurs migrations demandent l'accord de Juju. |
 | Plus tard | Jeton cabinet : Paramètres du cabinet → Firm Tokens, en lecture seule, à mettre dans le secret `PENNYLANE_API_TOKEN`. Tous les dossiers du cabinet deviendront alors synchronisables. |
 | À faire | Connecter Pennylane (MCP), créer le dossier 276211, premier « Actualiser maintenant » réel (source « MCP »), puis test du parcours client et de l'assistant. |
